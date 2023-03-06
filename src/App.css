@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+  }
+
+.navbar{
+    background-color: #eb8b77;
+}
+
+.nav-link{
+    color :antiquewhite
+}
+
+#containerP {
+    background-color:#f1c0b7;
+
+}
+
+#button-signUp {
+    background-color: #f5f2f1;
+    color:#f35648;
+}
+
+#button-signUp:hover {
+    background-color: white;
+}
+
+#button-signIn {
+    background-color: #8ec1a3;
+    color: white
+}
+
+#button-signIp:hover {
+    background-color: white;
+}
+
