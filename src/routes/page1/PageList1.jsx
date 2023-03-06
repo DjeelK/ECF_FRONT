@@ -2,9 +2,12 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CounterDisplay from './CounterDisplay';
 
+
 const PageList1 = () => {
     const counters = useSelector(state => state.counters.counters)
     const user = useSelector(state => state.auth.user)
+
+
 
     return (
     <>

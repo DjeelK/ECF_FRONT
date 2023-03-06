@@ -1,7 +1,8 @@
 import { useDispatch, useSelector} from "react-redux"
 import { useNavigate, useParams, useSearchParams } from "react-router-dom"
 import { useRef } from "react"
-import { addCounter, deleteCounter, editCounter } from "./CountersSlice";
+import { addCounter, deleteCounter, editCounter } from "./countersSlice";
+
 
 const CounterForm = () => {
     const [searchParams] = useSearchParams()
@@ -12,7 +13,7 @@ const CounterForm = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const dateRef = useRef();
+    const dueDateRef = useRef();
     const heightRef = useRef();
     const weightRef = useRef();
     const ageRef = useRef();
@@ -24,18 +25,19 @@ const CounterForm = () => {
         await dispatch(deleteCounter(counterId))
     } else {
 
-    const date = +dateRef.current.value;
+    
+    const dueDate = dueDateRef.current.value;
     const height = +heightRef.current.value;
     const weight = +weightRef.current.value;
     const age = +ageRef.current.value;
 
-    dateRef.current.value = "";
+    dueDateRef.current.value = "";
     heightRef.current.value =  "" ;
     weightRef.current.value =  "" ;
     ageRef.current.value =  "" ;
 
     const counterValues= {
-        date,
+        dueDate,
         height,
         weight,
         age
@@ -53,41 +55,49 @@ navigate(`/counters`)
     return (
         <form onSubmit={submitFormHandler}>
         <div className="mb-3">
-        <label htmlFor="start">Date:</label>
+        <label htmlFor="start" className="form-label">Date:</label>
         <input 
+        className="form-control"
         type="date" 
         id="start" 
         name="start-today"
-        value={counter?.date}
+        value={counter?.dueDate}
+        ref={dueDateRef}
         min="2023-03-06" max="2050-12-31"
         required={mode !== 'delete'} disabled={mode === 'delete'}/>
         </div>
         <div className="mb-3">
-            <label htmlFor="height"> Taille (cm):</label>
+            <label htmlFor="height" className="form-label"> Taille (cm):</label>
             <input
+            className="form-control"
             type="number"
             id="height"
             name="height"
             value={counter?.height}
+            ref={heightRef}
             required={mode !== 'delete'} disabled={mode === 'delete'}/>
             
         </div>
         <div className="mb-3">
-            <label htmlFor="weight"> Poids (kg):</label>
+            <label htmlFor="weight" className="form-label"> Poids (kg):</label>
             <input
+            className="form-control"
             type="number"
             id="weight"
             name="weight"
             value={counter?.weight}
+            ref={weightRef}
             required={mode !== 'delete'} disabled={mode === 'delete'}/>
         </div>
         <div className="mb-3">
-            <label htmlFor="age">Age:</label>
+            <label htmlFor="age " className="form-label">Age:</label>
             <input
+            className="form-control"
             type="number"
             id="age"
             name="age"
             value={counter?.age}
+            ref={ageRef}
             required={mode !== 'delete'} disabled={mode === 'delete'}/>
         </div>
         <div className="text-end">

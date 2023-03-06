@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         },
         {
         path: "/counters",
-        element:<PageList1/>    
+        element:<ProtectedRoute><PageList1/></ProtectedRoute>  
         },
         {
         path:"/counters/add",

@@ -23,7 +23,7 @@ export const fetchCounters = createAsyncThunk(
 )
 
 export const addCounter = createAsyncThunk(
-    "counter/addCounters",
+    "counters/addCounter",
     async (counterValues, {getState}) => {
         const token = getState().auth.user.idToken
         if (token) {
@@ -39,7 +39,7 @@ export const addCounter = createAsyncThunk(
 )
 
 export const editCounter = createAsyncThunk(
-    "counter/editCounters",
+    "counters/editCounter",
     async ({id, ...counterValues}, {getState}) => {
         const token = getState().auth.user.idToken
         if (token) {

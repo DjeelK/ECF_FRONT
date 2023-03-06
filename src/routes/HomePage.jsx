@@ -22,9 +22,9 @@ const HomePage = () => {
             Nous mettons à votre disposition une petite application (sans prétention) qui pourra vous permettre de suivre l'évolution de votre IMC tout au long de l'année (˶ᵔᵕᵔ˶)
             <br/>
             ------------------------------------------------------------------------------------------------------------------------
-            Rendez-vous sur notre <b>calculator</b> pour commencez l'aventure avec nous. ♡
+            Pour utiliser notre <b>calculator</b> et commencer l'aventure avec nous, veuillez vous identifier. ♡
             <br/>
-            Vous retrouverez votre historique en allant dans l'onglet réservé l'<b>IMCroyable</b> pour suivre votre évolution à nos côtés.
+            Vous y retrouverez notre calculatrice ainsi que votre historique en allant dans l'onglet réservé l'<b>IMCroyable</b> pour suivre votre évolution à nos côtés.
             <br/>
             Êtes-vous prêt(e)s ? <b>You can do it !</b>
             <br/>

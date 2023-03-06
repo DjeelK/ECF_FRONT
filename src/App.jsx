@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { signOut } from "./routes/auth/authSlice";
-import { useEffect } from "react";
-import { fetchCounters } from "./routes/page1/CountersSlice";
+import { fetchCounters } from "./routes/page1/countersSlice";
 import './App.css';
+import { useEffect } from "react";
 
 
 
@@ -13,6 +13,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchCounters())
+    
   }, [dispatch])
 
   return (
