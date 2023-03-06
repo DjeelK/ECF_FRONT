@@ -22,7 +22,16 @@ const HomePage = () => {
             Nous mettons à votre disposition une petite application (sans prétention) qui pourra vous permettre de suivre l'évolution de votre IMC tout au long de l'année (˶ᵔᵕᵔ˶)
             <br/>
             ------------------------------------------------------------------------------------------------------------------------
-            Rendez-vous directement sur <b>IMCroyable</b> pour obtenir votre IMC et commencez l'aventure avec nous. ♡
+            Rendez-vous sur notre <b>calculator</b> pour commencez l'aventure avec nous. ♡
+            <br/>
+            Vous retrouverez votre historique en allant dans l'onglet réservé l'<b>IMCroyable</b> pour suivre votre évolution à nos côtés.
+            <br/>
+            Êtes-vous prêt(e)s ? <b>You can do it !</b>
+            <br/>
+            <br/>
+            <img src="https://media4.giphy.com/media/dY1DoxjYYtvXjRelGG/giphy.gif" alt="So Cute Cheeks GIF"  
+            width="80" 
+            height="80"/>
             </p>
         </div>
     );

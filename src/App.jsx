@@ -1,13 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { signOut } from "./routes/auth/authSlice";
+import { useEffect } from "react";
+import { fetchCounters } from "./routes/page1/CountersSlice";
 import './App.css';
+
 
 
 function App() {
   const user = useSelector(state => state.auth.user)
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    dispatch(fetchCounters())
+  }, [dispatch])
 
   return (
     <div className="App">
@@ -24,14 +30,14 @@ function App() {
                   <NavLink className="nav-link" to={`/`}>Home</NavLink>
                 </li>
                   <li className="nav-item">
-                  <NavLink className="nav-link " to={`/imcroyable`}>IMCroyable</NavLink>
+                  <NavLink className="nav-link " to={`/counters`}>IMCroyable</NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink className="nav-link" to={`/page2`}>Page 2</NavLink>
                     </li>
               </ul>
               {user ? (
-                <button className="ms-auto btn btn-secondary" onClick={() => dispatch(signOut())}>Sign Out</button>
+                <button className="ms-auto btn btn-light"id="btn-SignOut"onClick={() => dispatch(signOut())}>Sign Out</button>
                 ) : (
                 <>
                   <Link className="ms-auto btn btn-light" id="button-signUp" to={`/auth?mode=Sign+Up`}>Sign Up</Link>

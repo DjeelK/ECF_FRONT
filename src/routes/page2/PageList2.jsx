@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageList1 = () => {
+const PageList2 = () => {
     return (
         <div>
         <h1>Coucou page1</h1>
@@ -8,4 +8,4 @@ const PageList1 = () => {
     );
 };
 
-export default PageList1;
+export default PageList2;
